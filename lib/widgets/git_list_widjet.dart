@@ -32,7 +32,7 @@ class MyGitListWidjet extends StatelessWidget {
     lang = List.generate(language.length, (i) {
       return Text(
         '${language[i]}, ',
-        style: TextStyle(color: AppColors.grey, fontSize: getWidth(12)),
+        style: TextStyle(color: AppColors.white, fontSize: getWidth(12)),
       );
     });
     SizeConfig().init(context);
@@ -84,18 +84,18 @@ class MyGitListWidjet extends StatelessWidget {
                   text: TextSpan(children: [
                 TextSpan(
                   text: '$price\$',
-                  style: const TextStyle(
+                  style: TextStyle(
                     color: AppColors.greyPrice,
-                    fontSize: 16,
+                    fontSize: getWidth(16),
                     fontWeight: FontWeight.w500,
                     fontFamily: 'Roboto',
                   ),
                 ),
-                const TextSpan(
-                  text: '/1 kunga',
+                TextSpan(
+                  text: ' /1 kunga',
                   style: TextStyle(
                     color: AppColors.black,
-                    fontSize: 10,
+                    fontSize: getWidth(12),
                     fontWeight: FontWeight.w400,
                     fontFamily: 'Roboto',
                   ),
@@ -118,8 +118,15 @@ class MyGitListWidjet extends StatelessWidget {
                   ),
                 ],
               ),
-              Row(
-                children: lang!,
+              Container(
+                padding: EdgeInsets.all(getWidth(6)),
+                decoration: BoxDecoration(
+                    color: AppColors.greyPrice,
+                    borderRadius:
+                        BorderRadius.all(Radius.circular(getWidth(6)))),
+                child: Row(
+                  children: lang!,
+                ),
               )
             ],
           ),

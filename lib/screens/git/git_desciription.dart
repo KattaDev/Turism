@@ -150,6 +150,15 @@ class GitDescriptionPage extends StatelessWidget {
                             fontWeight: FontWeight.w400,
                             fontFamily: 'Roboto',
                           ),
+                        ),
+                        Row(
+                          children: [
+                            Container(
+                              decoration:
+                                  BoxDecoration(color: AppColors.greyPrice),
+                              child: SvgPicture.asset('assets/icons/call.svg'),
+                            )
+                          ],
                         )
                       ],
                     ),

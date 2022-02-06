@@ -59,6 +59,12 @@ class OnBoardingPage extends StatelessWidget {
                 ),
               ],
             ),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (__) => HomeScreen()));
+                },
+                child: Text('Olinadi'))
           ],
         ),
       ),
